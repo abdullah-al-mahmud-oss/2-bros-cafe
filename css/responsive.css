@@ -167,3 +167,36 @@
   .spaces__images { grid-template-rows: 260px 170px; }
   .spaces__image figcaption { right: 10px; bottom: 10px; left: 10px; font-size: 12px; }
 }
+
+@media (max-width: 850px) {
+  .site-header--hero { position: fixed; z-index: 12; }
+  .home-menu { padding-block: 85px 90px; }
+  .home-menu__card--offset { margin-top: 34px; }
+  .social-grid { gap: 7px; }
+  .visit-band {
+    background-image:
+      linear-gradient(90deg, rgba(10, 25, 19, .9), rgba(10, 25, 19, .6)),
+      url("../Assets/interior-8.jpg");
+    background-position: center, center;
+  }
+}
+@media (max-width: 600px) {
+  .site-header--hero { min-height: 74px; }
+  .site-header--hero.is-scrolled { min-height: 68px; }
+  .home-ribbon { flex-wrap: nowrap; justify-content: flex-start; }
+  .home-ribbon__track { gap: 17px; }
+  .home-menu { padding-block: 72px 78px; }
+  .home-menu__heading { align-items: flex-start; flex-direction: column; gap: 19px; margin-bottom: 27px; }
+  .home-menu__heading h2 { font-size: clamp(42px, 11vw, 58px); }
+  .home-menu__heading > .text-link { margin: 0; }
+  .home-menu__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px 13px; }
+  .home-menu__card--offset { margin-top: 0; }
+  .home-menu__card img { aspect-ratio: 1 / 1.14; }
+  .home-menu__caption { padding-top: 10px; padding-bottom: 8px; font-size: 16px; }
+  .home-menu__caption span:last-child { font-size: 13px; }
+  .home-menu__note { font-size: 9px; line-height: 1.7; }
+  .social-note { padding-bottom: 76px; }
+  .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-block: 28px 24px; }
+  .whatsapp-float { right: 14px; bottom: 14px; min-height: 47px; padding-right: 13px; font-size: 9px; }
+  .whatsapp-float__icon { width: 29px; height: 29px; }
+}
