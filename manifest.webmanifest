@@ -1,0 +1,18 @@
+{
+  "name": "2 Bros Cafe",
+  "short_name": "2 Bros Cafe",
+  "description": "Where coffee, conversations, and late nights come together.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3efe6",
+  "theme_color": "#18352b",
+  "icons": [
+    {
+      "src": "Assets/logo.jpg",
+      "sizes": "447x447",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
