@@ -170,6 +170,7 @@
 
 @media (max-width: 850px) {
   .site-header--hero { position: fixed; z-index: 12; }
+  .hero__signature { display: none; }
   .home-menu { padding-block: 85px 90px; }
   .home-menu__card--offset { margin-top: 34px; }
   .social-grid { gap: 7px; }
@@ -183,6 +184,9 @@
 @media (max-width: 600px) {
   .site-header--hero { min-height: 74px; }
   .site-header--hero.is-scrolled { min-height: 68px; }
+  .hero__controls { right: 16px; bottom: 56px; gap: 6px; }
+  .hero__slide-count { min-width: 38px; margin-right: 1px; font-size: 8px; }
+  .hero__controls button { width: 36px; height: 36px; }
   .home-ribbon { flex-wrap: nowrap; justify-content: flex-start; }
   .home-ribbon__track { gap: 17px; }
   .home-menu { padding-block: 72px 78px; }

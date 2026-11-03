@@ -68,7 +68,9 @@
 
   <main id="main">
     <section class="hero hero--premium">
-      <img class="hero__image" src="Assets/interior-10.jpg" width="1080" height="1351" alt="A softly illuminated dining room at 2 Bros Cafe" fetchpriority="high">
+      <img class="hero__image is-active" src="Assets/interior-10.jpg" width="1080" height="1351" alt="A softly illuminated dining room at 2 Bros Cafe" fetchpriority="high" data-hero-slide aria-hidden="false">
+      <img class="hero__image" src="Assets/interior-7.jpg" width="1080" height="1351" alt="Window-side seating looking out over Gulshan" loading="lazy" data-hero-slide aria-hidden="true">
+      <img class="hero__image" src="Assets/interior-11.jpg" width="1080" height="1351" alt="A quiet green corner at 2 Bros Cafe" loading="lazy" data-hero-slide aria-hidden="true">
       <div class="hero__shade"></div>
       <div class="hero__content">
         <p class="eyebrow eyebrow--light">A cafe above the city <span aria-hidden="true">·</span> Gulshan, Dhaka</p>
@@ -82,6 +84,12 @@
       <div class="hero__signature">
         <span class="hero__signature-mark" aria-hidden="true">2B</span>
         <span>Fifth floor<br>Gulshan Avenue</span>
+      </div>
+      <div class="hero__controls" aria-label="Cafe photo gallery">
+        <span class="hero__slide-count" aria-hidden="true"><span data-slide-current>01</span> <i>/</i> 03</span>
+        <button type="button" data-hero-previous aria-label="Show previous cafe photo">←</button>
+        <button type="button" data-hero-toggle aria-label="Pause photo slideshow">Ⅱ</button>
+        <button type="button" data-hero-next aria-label="Show next cafe photo">→</button>
       </div>
       <a class="hero__scroll" href="#first-look"><span class="hero__scroll-line" aria-hidden="true"></span><span>Discover the cafe</span></a>
     </section>

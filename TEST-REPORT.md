@@ -10,7 +10,7 @@
 - Measured document overflow across all seven pages at narrow mobile (248px), mobile (320px), and desktop (1024px) viewport widths. Checked rendered image load failures in the gallery preview.
 - Rechecked all seven pages for horizontal overflow at narrow mobile (248px) and desktop (1009px content width) after the refreshed editorial homepage treatment.
 - Checked the enhanced homepage at narrow mobile (248px), mobile (360px), tablet (753px), and desktop (1584px) content widths; all measured without horizontal overflow or broken homepage images.
-- Exercised the sticky header, scroll progress indicator, section reveals, mobile navigation, and the WhatsApp contact link; checked the new featured-menu cards and Instagram photo grid.
+- Exercised the hero photo carousel controls, sticky header, scroll progress indicator, section reveals, mobile navigation, and WhatsApp contact link; checked the featured-menu cards and Instagram photo grid.
 - Verified the business details, phone/WhatsApp/email links, and Google Maps links against the supplied information.
 - Checked that the site contains no build dependencies, backend, or external scripts.
 
@@ -21,7 +21,7 @@
 - All 37 local HTTP page/resource requests returned HTTP 200.
 - No horizontal overflow was found at the three tested viewport widths after fixing overly wide headings and a narrow-screen grid minimum.
 - The refreshed home page has no horizontal overflow at the additional narrow-mobile and desktop checks.
-- The new homepage interactions, menu highlights, photo tiles, and WhatsApp link rendered and worked in the browser preview.
+- The new homepage photo carousel, scroll effects, menu highlights, photo tiles, and WhatsApp link rendered and worked in the browser preview.
 - The mobile navigation and lightbox open/next/close interactions worked in the browser preview; no broken images were reported in the gallery.
 
 ## Limitations

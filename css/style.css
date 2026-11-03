@@ -596,3 +596,48 @@ h1 em, h2 em { color: #aba98b; font-weight: 400; }
   .home-ribbon__track { animation: none; }
   .has-motion [data-reveal] { opacity: 1; transform: none; transition: none; }
 }
+.hero--premium .hero__image {
+  z-index: 0;
+  opacity: 0;
+  transform: scale(1.035);
+  animation: none;
+  transition: opacity 1.1s ease, transform 7s cubic-bezier(.2,.7,.2,1);
+}
+.hero--premium .hero__image.is-active { opacity: 1; transform: scale(1); }
+.hero__signature { right: clamp(195px, 20vw, 320px); bottom: 31px; }
+.hero__controls {
+  position: absolute;
+  z-index: 2;
+  right: clamp(28px, 6vw, 88px);
+  bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f3eddf;
+}
+.hero__slide-count {
+  min-width: 46px;
+  margin-right: 4px;
+  color: rgba(247, 241, 226, .8);
+  font-size: 9px;
+  letter-spacing: .14em;
+}
+.hero__slide-count i { margin-inline: 3px; color: #d3b77b; font-style: normal; }
+.hero__controls button {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(224, 200, 149, .58);
+  border-radius: 50%;
+  background: rgba(12, 29, 24, .3);
+  color: #f4f0e7;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.hero__controls button:hover { transform: translateY(-2px); background: #d3b77b; color: #10251e; }
+.hero__controls button:focus-visible { outline-color: #e4d1a5; }
+@media (prefers-reduced-motion: reduce) {
+  .hero--premium .hero__image { transform: none; transition: none; }
+  .hero__controls [data-hero-toggle] { display: none; }
+}

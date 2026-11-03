@@ -65,6 +65,78 @@
     revealItems.forEach(function (item) { revealObserver.observe(item); });
   }
 
+  var hero = document.querySelector(".hero--premium");
+  if (hero) {
+    var heroSlides = Array.prototype.slice.call(hero.querySelectorAll("[data-hero-slide]"));
+    var slideCount = hero.querySelector("[data-slide-current]");
+    var previousSlide = hero.querySelector("[data-hero-previous]");
+    var toggleSlideshow = hero.querySelector("[data-hero-toggle]");
+    var nextSlide = hero.querySelector("[data-hero-next]");
+    var slideIndex = 0;
+    var slideTimer = null;
+    var pausedByUser = false;
+    var pausedByInteraction = false;
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function showSlide(index) {
+      slideIndex = (index + heroSlides.length) % heroSlides.length;
+      heroSlides.forEach(function (slide, position) {
+        var active = position === slideIndex;
+        slide.classList.toggle("is-active", active);
+        slide.setAttribute("aria-hidden", String(!active));
+      });
+      if (slideCount) slideCount.textContent = String(slideIndex + 1).padStart(2, "0");
+    }
+
+    function stopSlideshow() {
+      if (slideTimer) window.clearInterval(slideTimer);
+      slideTimer = null;
+    }
+
+    function startSlideshow() {
+      if (reduceMotion.matches || pausedByUser || pausedByInteraction || slideTimer || document.hidden || heroSlides.length < 2) return;
+      slideTimer = window.setInterval(function () { showSlide(slideIndex + 1); }, 7000);
+    }
+
+    if (previousSlide) previousSlide.addEventListener("click", function () { showSlide(slideIndex - 1); });
+    if (nextSlide) nextSlide.addEventListener("click", function () { showSlide(slideIndex + 1); });
+    if (toggleSlideshow) toggleSlideshow.addEventListener("click", function () {
+      pausedByUser = !pausedByUser;
+      toggleSlideshow.setAttribute("aria-label", pausedByUser ? "Play photo slideshow" : "Pause photo slideshow");
+      toggleSlideshow.textContent = pausedByUser ? "▶" : "Ⅱ";
+      if (pausedByUser) stopSlideshow();
+      else {
+        pausedByInteraction = false;
+        startSlideshow();
+      }
+    });
+    hero.addEventListener("mouseenter", function () {
+      pausedByInteraction = true;
+      stopSlideshow();
+    });
+    hero.addEventListener("mouseleave", function () {
+      pausedByInteraction = hero.contains(document.activeElement);
+      if (!pausedByInteraction) startSlideshow();
+    });
+    hero.addEventListener("focusin", function () {
+      pausedByInteraction = true;
+      stopSlideshow();
+    });
+    hero.addEventListener("focusout", function () {
+      window.requestAnimationFrame(function () {
+        if (!hero.contains(document.activeElement)) {
+          pausedByInteraction = hero.matches(":hover");
+          if (!pausedByInteraction) startSlideshow();
+        }
+      });
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stopSlideshow();
+      else startSlideshow();
+    });
+    startSlideshow();
+  }
+
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("primary-nav");
   if (!toggle || !nav) return;
