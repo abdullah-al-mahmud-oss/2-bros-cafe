@@ -47,7 +47,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header class="site-header site-header--hero">
     <a class="brand" href="index.html" aria-label="2 Bros Cafe home">
       <img src="Assets/logo.jpg" width="447" height="447" alt="">
       <span>2 Bros <em>Cafe</em></span>
@@ -67,25 +67,33 @@
   </header>
 
   <main id="main">
-    <section class="hero">
-      <img class="hero__image" src="Assets/banner.jpg" width="735" height="272" alt="The warmly lit interior and sign at 2 Bros Cafe" fetchpriority="high">
+    <section class="hero hero--premium">
+      <img class="hero__image" src="Assets/interior-10.jpg" width="1080" height="1351" alt="A softly illuminated dining room at 2 Bros Cafe" fetchpriority="high">
       <div class="hero__shade"></div>
       <div class="hero__content">
-        <p class="eyebrow eyebrow--light">Gulshan · Dhaka</p>
-        <h1>2 Bros<br><span>Cafe</span></h1>
+        <p class="eyebrow eyebrow--light">A cafe above the city <span aria-hidden="true">·</span> Gulshan, Dhaka</p>
+        <h1>2 Bros<br><em>Cafe.</em></h1>
         <p class="hero__tagline">Where coffee, conversations,<br class="desktop-break"> and late nights come together.</p>
         <div class="hero__actions">
-          <a class="button button--light" href="menu.html">Explore the menu <span aria-hidden="true">↗</span></a>
-          <a class="text-link text-link--light" href="contact.html">Find the cafe <span aria-hidden="true">→</span></a>
+          <a class="button button--light" href="menu.html">Discover the menu <span aria-hidden="true">↗</span></a>
+          <a class="text-link text-link--light" href="contact.html">Make your way here <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <p class="hero__vertical" aria-hidden="true">A familiar place to linger</p>
+      <div class="hero__signature">
+        <span class="hero__signature-mark" aria-hidden="true">2B</span>
+        <span>Fifth floor<br>Gulshan Avenue</span>
+      </div>
+      <a class="hero__scroll" href="#first-look"><span class="hero__scroll-line" aria-hidden="true"></span><span>Discover the cafe</span></a>
     </section>
 
-    <section class="intro section-wrap">
-      <p class="eyebrow">A place to settle in</p>
+    <div class="home-ribbon" aria-label="Coffee, conversations, and late nights">
+      <span>Coffee</span><i aria-hidden="true"></i><span>Conversations</span><i aria-hidden="true"></i><span>Late nights</span><i aria-hidden="true"></i><span>Gulshan, Dhaka</span>
+    </div>
+
+    <section class="intro section-wrap" id="first-look">
+      <p class="eyebrow">A place to settle in <span aria-hidden="true">/</span> 01</p>
       <div class="intro__grid">
-        <h2>Coffee, company,<br><em>and a little more time.</em></h2>
+        <h2>Stay for the coffee.<br><em>Make time for everything.</em></h2>
         <div class="intro__copy">
           <p>At 2 Bros Cafe, the best moments have room to unfold. Find us above Gulshan Avenue, surrounded by warm light, good food, and the easy rhythm of a conversation that runs long.</p>
           <a class="text-link" href="about.html">Get to know us <span aria-hidden="true">→</span></a>
@@ -116,12 +124,15 @@
       <div class="spaces__images">
         <figure class="spaces__image spaces__image--tall">
           <img src="Assets/interior-7.jpg" width="1080" height="1351" alt="Window-side seating looking out over Gulshan" loading="lazy">
+          <figcaption><span>01</span> The city, just beyond the window</figcaption>
         </figure>
         <figure class="spaces__image spaces__image--wide">
           <img src="Assets/interior-2.jpg" width="494" height="619" alt="A cozy booth beneath the cafe's pendant lights" loading="lazy">
+          <figcaption><span>02</span> A corner to call your own</figcaption>
         </figure>
         <figure class="spaces__image spaces__image--small">
           <img src="Assets/interior-11.jpg" width="1080" height="1351" alt="A quiet green corner at 2 Bros Cafe" loading="lazy">
+          <figcaption><span>03</span> Take the evening slowly</figcaption>
         </figure>
       </div>
       <a class="text-link spaces__link" href="gallery.html">Take a look around <span aria-hidden="true">→</span></a>

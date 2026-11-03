@@ -24,7 +24,7 @@ All source images are preserved in `Assets/`. The directory contains JPEGs only;
 | `interior-7.jpg` | 1080 × 1351 | Home and gallery window-side view |
 | `interior-8.jpg` | 1080 × 1351 | About and gallery window seating |
 | `interior-9.jpg` | 1080 × 1351 | Cafe interior |
-| `interior-10.jpg` | 1080 × 1351 | About and gallery dining area |
+| `interior-10.jpg` | 1080 × 1351 | Home hero; About and gallery dining area |
 | `interior-11.jpg` | 1080 × 1351 | Green corner seating |
 
 Food image artwork includes embedded promotional text; the menu page uses only dish names legible in that artwork and does not infer prices.

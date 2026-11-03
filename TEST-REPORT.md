@@ -8,6 +8,7 @@
 - Served the project locally over HTTP and requested all seven pages plus CSS, JavaScript, images, favicon, manifest, robots, and sitemap files.
 - Opened the local site in a browser preview. Verified the mobile navigation opens and exposes its links; opened the gallery lightbox, advanced to the next image, and closed it.
 - Measured document overflow across all seven pages at narrow mobile (248px), mobile (320px), and desktop (1024px) viewport widths. Checked rendered image load failures in the gallery preview.
+- Rechecked all seven pages for horizontal overflow at narrow mobile (248px) and desktop (1009px content width) after the refreshed editorial homepage treatment.
 - Verified the business details, phone/WhatsApp/email links, and Google Maps links against the supplied information.
 - Checked that the site contains no build dependencies, backend, or external scripts.
 
@@ -17,6 +18,7 @@
 - JavaScript syntax checks passed.
 - All 37 local HTTP page/resource requests returned HTTP 200.
 - No horizontal overflow was found at the three tested viewport widths after fixing overly wide headings and a narrow-screen grid minimum.
+- The refreshed home page has no horizontal overflow at the additional narrow-mobile and desktop checks.
 - The mobile navigation and lightbox open/next/close interactions worked in the browser preview; no broken images were reported in the gallery.
 
 ## Limitations
