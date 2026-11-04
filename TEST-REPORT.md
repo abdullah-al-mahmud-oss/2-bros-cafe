@@ -11,6 +11,8 @@
 - Rechecked all seven pages for horizontal overflow at narrow mobile (248px) and desktop (1009px content width) after the refreshed editorial homepage treatment.
 - Checked the enhanced homepage at narrow mobile (248px), mobile (360px), tablet (753px), and desktop (1584px) content widths; all measured without horizontal overflow or broken homepage images.
 - Exercised the hero photo carousel controls, sticky header, scroll progress indicator, section reveals, mobile navigation, and WhatsApp contact link; checked the featured-menu cards and Instagram photo grid.
+- Checked mobile navigation text contrast on all seven pages. The revised parchment dropdown reaches at least 5.74:1 for CTA text and 7.53:1 for the selected Home link.
+- Verified the selected Home link on the desktop hero header at 10.41:1 against its composited dark-glass background.
 - Verified the business details, phone/WhatsApp/email links, and Google Maps links against the supplied information.
 - Checked that the site contains no build dependencies, backend, or external scripts.
 
@@ -22,6 +24,8 @@
 - No horizontal overflow was found at the three tested viewport widths after fixing overly wide headings and a narrow-screen grid minimum.
 - The refreshed home page has no horizontal overflow at the additional narrow-mobile and desktop checks.
 - The new homepage photo carousel, scroll effects, menu highlights, photo tiles, and WhatsApp link rendered and worked in the browser preview.
+- Mobile navigation links on all pages meet the WCAG AA 4.5:1 text-contrast threshold in the narrow-screen check.
+- Hero text has a stronger, consistent dark overlay across all three rotating interior photos; the desktop header uses an opaque glass treatment for readable navigation.
 - The mobile navigation and lightbox open/next/close interactions worked in the browser preview; no broken images were reported in the gallery.
 
 ## Limitations
